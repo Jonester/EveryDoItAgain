@@ -66,7 +66,7 @@
     if ([[segue identifier] isEqualToString:@"DetailViewController"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         ToDo *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
-        DetailViewController *controller = (DetailViewController *)[[segue destinationViewController] topViewController];
+        DetailViewController *controller = [segue destinationViewController];
         [controller setDetailItem:object];
         controller.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
         controller.navigationItem.leftItemsSupplementBackButton = YES;

@@ -13,7 +13,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *detailTitle;
 @property (weak, nonatomic) IBOutlet UILabel *detailDescription;
 @property (weak, nonatomic) IBOutlet UILabel *detailPriorityLabel;
-@property (weak, nonatomic) IBOutlet UIStepper *detailPriorityStepper;
+@property (weak, nonatomic) IBOutlet UIStepper *detailStepper;
 
 @end
 
@@ -25,6 +25,8 @@
         self.detailTitle.text = self.detailItem.title;
         self.detailDescription.text = self.detailItem.todoDescription;
         self.detailPriorityLabel.text = @(self.detailItem.priorityNumber).stringValue;
+        
+        self.detailStepper.value = [self.detailPriorityLabel.text integerValue];
     }
 }
 
@@ -52,6 +54,8 @@
         [self configureView];
     }
 }
-
+- (IBAction)detailStepper:(UIStepper *)sender {
+    self.detailPriorityLabel.text = @(sender.value).stringValue;
+}
 
 @end

@@ -84,6 +84,9 @@
                                     <constraint firstAttribute="width" constant="94" id="5g5-zA-8wF"/>
                                     <constraint firstAttribute="height" constant="29" id="r73-dt-P31"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="detailStepper:" destination="JEX-9P-axG" eventType="valueChanged" id="9OJ-Gi-hxt"/>
+                                </connections>
                             </stepper>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gRS-kc-WMH">
                                 <rect key="frame" x="34.5" y="144" width="305" height="40"/>
@@ -131,10 +134,8 @@
                     <connections>
                         <outlet property="detailDescription" destination="Aw3-VV-CrF" id="FRA-Iv-lTT"/>
                         <outlet property="detailPriorityLabel" destination="vLg-6s-daX" id="lkF-N1-1ob"/>
-                        <outlet property="detailPriorityStepper" destination="90i-vF-KsT" id="6zX-39-QeA"/>
+                        <outlet property="detailStepper" destination="90i-vF-KsT" id="FM0-87-0bG"/>
                         <outlet property="detailTitle" destination="gRS-kc-WMH" id="E0s-LJ-Lmv"/>
-                        <outlet property="priorityLabel" destination="vLg-6s-daX" id="y4e-PT-YpZ"/>
-                        <outlet property="priorityStepper" destination="90i-vF-KsT" id="0rd-NP-lNK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FJe-Yq-33r" sceneMemberID="firstResponder"/>
