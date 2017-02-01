@@ -1,5 +1,5 @@
 //
-//  DetailViewController.h
+//  AddNewTodoViewController.h
 //  EveryDoItAgain
 //
 //  Created by Chris Jones on 2017-02-01.
@@ -10,10 +10,8 @@
 #import "EveryDoItAgain+CoreDataModel.h"
 #import "ToDo+CoreDataClass.h"
 
-@interface DetailViewController : UIViewController
+@interface AddNewTodoViewController : UIViewController
 
-@property (strong, nonatomic) ToDo *detailItem;
-
+@property (strong, nonatomic) NSManagedObjectContext *context;
 
 @end
-
