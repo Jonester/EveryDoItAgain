@@ -14,7 +14,6 @@
 
 @interface MasterViewController ()
 
-
 @end
 
 @implementation MasterViewController
@@ -24,9 +23,6 @@
     // Do any additional setup after loading the view, typically from a nib.
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
 
-//    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
-//    self.navigationItem.rightBarButtonItem = addButton;
-//    self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
 }
 
 
@@ -73,7 +69,7 @@
     }
     if ([[segue identifier] isEqualToString:@"AddNewToDoViewController"]) {
         AddNewTodoViewController *antvc = [segue destinationViewController];
-        antvc.context = self.managedObjectContext;
+        antvc.todoContext = self.managedObjectContext;
     }
 }
 

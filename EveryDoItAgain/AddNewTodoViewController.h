@@ -9,9 +9,13 @@
 #import <UIKit/UIKit.h>
 #import "EveryDoItAgain+CoreDataModel.h"
 #import "ToDo+CoreDataClass.h"
+#import "DetailViewController.h"
 
 @interface AddNewTodoViewController : UIViewController
 
-@property (strong, nonatomic) NSManagedObjectContext *context;
+@property (strong, nonatomic) NSManagedObjectContext *todoContext;
+@property (strong, nonatomic) ToDo *todo;
+
+-(void)displayTodo:(ToDo *)existingTodo;
 
 @end

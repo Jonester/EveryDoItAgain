@@ -7,13 +7,13 @@
 //
 
 #import "DetailViewController.h"
+#import "AddNewTodoViewController.h"
 
 @interface DetailViewController ()
 
 @property (weak, nonatomic) IBOutlet UILabel *detailTitle;
 @property (weak, nonatomic) IBOutlet UILabel *detailDescription;
 @property (weak, nonatomic) IBOutlet UILabel *detailPriorityLabel;
-@property (weak, nonatomic) IBOutlet UIStepper *detailStepper;
 
 @end
 
@@ -25,8 +25,6 @@
         self.detailTitle.text = self.detailItem.title;
         self.detailDescription.text = self.detailItem.todoDescription;
         self.detailPriorityLabel.text = @(self.detailItem.priorityNumber).stringValue;
-        
-        self.detailStepper.value = [self.detailPriorityLabel.text integerValue];
     }
 }
 
@@ -54,8 +52,12 @@
         [self configureView];
     }
 }
-- (IBAction)detailStepper:(UIStepper *)sender {
-    self.detailPriorityLabel.text = @(sender.value).stringValue;
-}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([[segue identifier] isEqualToString:@"AddNewToDoViewController"]) {
+        AddNewTodoViewController *antvc = [segue destinationViewController];
+        antvc.todo = self.detailItem;
+    }
+        }
 
 @end

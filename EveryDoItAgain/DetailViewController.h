@@ -13,6 +13,7 @@
 @interface DetailViewController : UIViewController
 
 @property (strong, nonatomic) ToDo *detailItem;
+@property (strong, nonatomic) NSManagedObjectContext *context;
 
 
 @end
